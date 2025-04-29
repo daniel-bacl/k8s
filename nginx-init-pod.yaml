@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-init
+spec:
+  initContainers:
+  - name: init-message
+    image: busybox
+    command: ['sh','-c','echo Init Container exec done; sleep 5']
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+    - containerPort: 80
