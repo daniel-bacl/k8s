@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: monitored-pod
+  labels:
+    monitor: "true"
+spec:
+  containers:
+  - name: nginx
+    image: nginx
