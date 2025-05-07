@@ -1,0 +1,10 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: openebs-hostpath
+provisioner: openebs.io/local
+volumeBindingMode: WaitForFirstConsumer
+reclaimPolicy: Delete
+parameters:
+  BasePath: "/data" # 로컬 디스크의 마운트 포인트
+  StorageType: "hostpath"
