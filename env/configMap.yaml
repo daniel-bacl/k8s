@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cm-dev
+data:
+  SSH: 'false'
+  User: dev
+    # 명령어로도 가능
+    # kubectl create configmap cm-dev \
+    # --from-literal=SSH=false \
+    # --from-literal=User=dev

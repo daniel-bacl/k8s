@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-too-much
+  namespace: limit-demo
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    resources:
+      requests:
+        cpu: "2000m" # 2 cores → 제한 초과
+        memory: "2Gi" # 제한 초과
